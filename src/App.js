@@ -1,10 +1,22 @@
-import './App.css';
+
+// context
+import Context from "./context/Context";
+
+
+// comoponents
+import Mainpage from './components/Mainpage';
+import Navbar from "./components/Navbar";
 
 function App() {
+
+
   return (
-    <div className="App">
-        App
-    </div>
+    <Context>
+      <Navbar />
+      <Mainpage />
+    </Context>
+
+
   );
 }
 
