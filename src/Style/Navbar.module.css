@@ -1,0 +1,84 @@
+@font-face {
+    font-family: thin;
+    src: url(../fonts/JosefinSans-Regular.ttf);
+  }
+
+*{
+    font-family: thin;
+}
+.navbar{
+    background-color: #802c6e;
+    width: 100%;
+    /* overflow-x: hidden; */
+ 
+}
+.navbar_part {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cart_part {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* margin-left: auto; */
+
+}
+a{
+    text-decoration: none;
+}
+ul , li {
+    list-style: none;
+
+    color: white;
+}
+li:hover{
+    scale: 1.2;
+    color:white ;
+}
+.icon{
+    font-size: 1rem;
+    color: white;
+}
+.toggle_button{
+    color: white;
+}
+
+.toggle_button{
+    display: none;
+}
+/* .navbar_controller{
+    padding: 1rem 2rem;
+} */
+.navbar_controller h2{
+    color: white;
+}
+.toggle_button2{
+    color: white;
+    display: none;
+}
+
+
+
+/* --------------------- responsive -------------------------- */
+
+@media screen and (max-width:960px){
+    .navbar_part ,.cart_part{
+        display: none;
+        /* align-items: end; */
+        flex-direction: column;
+    }
+    .toggle_button{
+        display: block;
+    }
+    li{
+        margin:0;
+    }
+    ul{
+        margin: 0;
+    }
+}
+
+
+
