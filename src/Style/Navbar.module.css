@@ -64,6 +64,9 @@ li:hover{
 /* --------------------- responsive -------------------------- */
 
 @media screen and (max-width:960px){
+    .navbar{
+        padding: 0.7rem 1.2rem;
+    }
     .navbar_part ,.cart_part{
         display: none;
         /* align-items: end; */

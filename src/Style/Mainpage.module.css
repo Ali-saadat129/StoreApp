@@ -1,0 +1,19 @@
+.scroll_pic{
+    display: block;
+    /* background-image: url("../picture/Collection\ stylish\ young\ women\ dressed\ vector\ image\ on\ VectorStock.jpg"); */
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.scroll_pic img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-size: cover; */
+    object-fit: cover;
+}
