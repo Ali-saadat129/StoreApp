@@ -2,9 +2,15 @@ import React from 'react';
 
 // hooks
 import { useContext } from 'react';
-
+// css
+import Styles from "../Style/CardsParent.module.css"
 // context
 import { Contextprovider } from '../context/Context';
+// bootstrap   
+import 'bootstrap/dist/css/bootstrap.css';
+// components
+import Card from './Card';
+
 
 const CaredsParent = () => {
 
@@ -12,8 +18,23 @@ const CaredsParent = () => {
     console.log(allData)
     
     return (
-        <div>
-            {allData.map(data => <p key={data.name}>{data.title}</p>)}
+        <div className={Styles.cardsParent}>
+            <div className={`${Styles.sortParent}`}>
+
+                <select>
+                    <option>All product</option>
+                    <option>most view</option>
+                    <option>most buy</option>
+                </select>
+                
+            </div>
+
+            <div className={`${Styles.cardPart} d-flex row`}>
+                
+                {allData.map(data => <div className={`col-4`}> <Card  Data={data}></Card> </div>)}
+
+            </div>
+
         </div>
     );
 };

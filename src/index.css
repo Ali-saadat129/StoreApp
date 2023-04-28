@@ -5,9 +5,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+
+}
+
+body {
   overflow-x: hidden;
+}
+html{
 
   width: 100vw;
+  overflow-x: hidden;
 }
 
 code {

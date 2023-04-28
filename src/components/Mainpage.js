@@ -31,9 +31,9 @@ const Mainpage = () => {
                      <h5>WELCOME TO SHOPLAND</h5>
                      
                 </div>
-                {/* <img src={bigback}></img> */}
+                <img src={bigback}></img>
             </div>
-                <h1>{rr} PRODUCT {rr2} </h1>
+                <h1 className={`mt-4`}>{rr} PRODUCT {rr2} </h1>
                 <CaredsParent />
         </div>
     );
