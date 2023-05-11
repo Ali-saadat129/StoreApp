@@ -1,7 +1,7 @@
 
 // context
 import Context from "./context/Context";
-
+import { CartContext } from "../src/context/CardContext";
 // css
 import Styles from "./App.module.css"
 
@@ -15,8 +15,10 @@ function App() {
   return (
     <div className={`${Styles.App}`}>
     <Context>
-      <Navbar />
-      <Mainpage />
+      <CartContext>
+        <Navbar />
+        <Mainpage />
+      </CartContext>
     </Context>
     </div>
 
