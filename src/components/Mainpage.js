@@ -2,7 +2,9 @@ import React from 'react';
 
 // context 
 import { useContext } from 'react';
-import {Contextprovider} from '../context/Context'
+import {Contextprovider} from '../context/Context';
+import {CartContext} from '../context/Cardcontextuse';
+
 // css
 import Styles from "../Style/Mainpage.module.css"
 
@@ -16,9 +18,10 @@ import bigback from "../picture/Untitled-3.gif"
 
 
 const Mainpage = () => {
-
-    const value = useContext(Contextprovider)
-    const width = window.innerHeight
+// context data 
+    const value = useContext(Contextprovider);
+    const {state , dispatch} = useContext(CartContext);
+    const width = window.innerHeight;
 
     // asign 
     const rr = "{"
@@ -33,6 +36,7 @@ const Mainpage = () => {
                 </div>
                 <img src={bigback}></img>
             </div>
+            {/* <button  onClick={() => dispatch({type:"ADD"})}>Add</button> */}
                 <h1 className={`mt-4`}>{rr} PRODUCT {rr2} </h1>
                 <CaredsParent />
         </div>

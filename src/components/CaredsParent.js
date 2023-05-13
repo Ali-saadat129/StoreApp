@@ -15,7 +15,7 @@ import Card from './Card';
 const CaredsParent = () => {
 
     const allData = useContext(Contextprovider)
-    console.log(allData)
+    // console.log(allData)
     
     return (
         <div className={Styles.cardsParent}>
@@ -31,7 +31,7 @@ const CaredsParent = () => {
 
             <div className={`${Styles.cardPart} d-flex row`}>
                 
-                {allData.map(data => <div className={`col-4`}> <Card  Data={data}></Card> </div>)}
+                {allData.map(data => <div key={data.title} className={`col-4`}> <Card key={data.title}  Data={data}></Card> </div>)}
 
             </div>
 

@@ -1,7 +1,8 @@
-
-// context
+// react router dom
+import { Routes, Route ,redirect } from "react-router-dom";
+// // context
 import Context from "./context/Context";
-import { CartContext } from "../src/context/CardContext";
+import Cardcontextuse  from "./context/Cardcontextuse";
 // css
 import Styles from "./App.module.css"
 
@@ -13,14 +14,17 @@ function App() {
 
 
   return (
-    <div className={`${Styles.App}`}>
-    <Context>
-      <CartContext>
-        <Navbar />
-        <Mainpage />
-      </CartContext>
-    </Context>
-    </div>
+    // <div className={`${Styles.App}`}>
+      <Context>
+        <Cardcontextuse>
+          <Navbar />
+          <Routes>
+            <Route path="*" element={<Mainpage to="/" replace />} />
+            
+          </Routes>
+        </Cardcontextuse>
+      </Context>
+    // </div>
 
   );
 }

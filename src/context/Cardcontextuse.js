@@ -6,21 +6,23 @@ import { useReducer } from 'react';
 const initialState = {
     Selected : [],
     Totall:0,
-    Count : 0 
+    Count : 0 ,
+    Like : 0,
+    LikeCount : 0
 }
 
 
 const actionState = (state , action ) => {
     switch(action.type){
-        case "Add" :
+        case "ADD" :
             if(!state.Selected.find(ithem => ithem.id===action.payload.id)){
                 state.Selected.push({
                     ...action.payload,
                     quantity:1
                 })
-            console.log(`Add ======= ${state.Selected}`)
-
-            }
+                
+            } 
+            console.log(state.Selected)
             return{
                 ...state,
                 Selected : [...state.Selected]
@@ -56,28 +58,36 @@ const actionState = (state , action ) => {
                 Totall:0,
                 Count : 0
             }
-        default :
-            return{
-                ...state
+        case "LIKE" :
+            if(!state.Like.find(ithem => ithem.id=== action.payload.id)){
+                state.Like.push({...action.payload});
+                state.LikeCount++;
+
             }
+            return{
+                ...state,
+            }
+        default :
+            return state
         
     }
 }
 
 export const CartContext = createContext()
 
-const cardContext = ( { Children } ) => {
+
+const Cardcontextuse = ( {children} ) => {
 
 
-    const [ state , dispatch ] = useReducer( initialState , actionState )
+    const [ state , dispatch ] = useReducer( actionState , initialState  )
 
 
 
     return (
-        <CartContext.Provider value={{state,dispatch}} >
-            {Children}
+        <CartContext.Provider value={{ state , dispatch}} >
+            {children}
         </CartContext.Provider>
     );
 };
 
-export default cardContext;
+export default Cardcontextuse;
