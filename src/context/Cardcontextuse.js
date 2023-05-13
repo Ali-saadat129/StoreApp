@@ -7,7 +7,7 @@ const initialState = {
     Selected : [],
     Totall:0,
     Count : 0 ,
-    Like : 0,
+    Like : [],
     LikeCount : 0
 }
 
@@ -20,16 +20,16 @@ const actionState = (state , action ) => {
                     ...action.payload,
                     quantity:1
                 })
+                state.Count++
                 
             } 
-            console.log(state.Selected)
             return{
                 ...state,
                 Selected : [...state.Selected]
             }
         case "REMOVE" :
-            const newSelected = state.Selected.filter(ithem => ithem.id !== action.payliad.id)
-            console.log(`REMOVE ======= ${state.Selected}`)
+            const newSelected = state.Selected.filter(ithem => ithem.id !== action.payload.id)
+            state.Count--
 
             return{
                 ...state , 
@@ -39,19 +39,16 @@ const actionState = (state , action ) => {
         case "INCREASE": 
             const indexOfSelected  = state.Selected.findIndex(ithem => ithem.id === action.payload.id)
             state.Selected[indexOfSelected].quantity++;
-            console.log(`INCREASE ======= ${state.Selected}`)
             return{
                 ...state,
             }
         case "DECREASE" : 
             const indexselected  = state.Selected.findIndex(ithem => ithem.id === action.payload.id)
             state.Selected[indexselected].quantity--;
-            console.log(`DECREASE ======= ${state.Selected}`)
             return{
                 ...state,
         }
         case "CLEAR" :
-            console.log(`CLEAR ======= ${state.Selected}`)
 
             return{
                 Selected : [],
@@ -62,7 +59,6 @@ const actionState = (state , action ) => {
             if(!state.Like.find(ithem => ithem.id=== action.payload.id)){
                 state.Like.push({...action.payload});
                 state.LikeCount++;
-
             }
             return{
                 ...state,

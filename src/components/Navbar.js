@@ -2,15 +2,18 @@ import React from 'react';
 
 // bootstrap   
 import 'bootstrap/dist/css/bootstrap.css';
-import { Cart4 } from 'react-bootstrap-icons';
-import {Heart} from 'react-bootstrap-icons';
-import {List} from 'react-bootstrap-icons';
-import {ChevronUp} from 'react-bootstrap-icons';
+import { Cart4 , Heart , List , ChevronUp} from 'react-bootstrap-icons';
 // css
 import Styles from '../Style/Navbar.module.css';
+// context 
+import { useContext } from 'react';
+import {CartContext} from '../context/Cardcontextuse'
+
 
 const Navbar = () => {
 
+
+    const {state, dispatch } = useContext(CartContext)
 
     const show_nav = (situation) =>{
         const nav1 = document.querySelector('.nav1');
@@ -46,8 +49,8 @@ const Navbar = () => {
                 </ul>
 
                  <ul className={ `col-lg-4 nav2 ${Styles.cart_part}`}>
-                    <li><a className={`${Styles.icon}`}><Heart></Heart></a><span>0</span></li>
-                    <li><a className={`${Styles.icon}`}><Cart4></Cart4></a><span>0</span></li>
+                    <li><a className={`${Styles.icon}`}><Heart></Heart></a><span>{state.LikeCount}</span></li>
+                    <li><a className={`${Styles.icon}`}><Cart4></Cart4></a><span>{state.Count}</span></li>
                     <li><a>Log in</a></li>
 
                 </ul>
