@@ -20,7 +20,9 @@ const actionState = (state , action ) => {
                     ...action.payload,
                     quantity:1
                 })
-                state.Count++
+                state.Count++;
+                const indexOfSelected  = state.Selected.findIndex(ithem => ithem.id === action.payload.id)
+                state.Totall+=action.payload.price
                 
             } 
             return{
@@ -28,8 +30,10 @@ const actionState = (state , action ) => {
                 Selected : [...state.Selected]
             }
         case "REMOVE" :
-            const newSelected = state.Selected.filter(ithem => ithem.id !== action.payload.id)
-            state.Count--
+            const newSelected = state.Selected.filter(ithem => ithem.id !== action.payload.id);
+            state.Count--;
+            const removeindex  = state.Selected.findIndex(ithem => ithem.id === action.payload.id)
+            state.Totall-=action.payload.price
 
             return{
                 ...state , 
@@ -39,17 +43,20 @@ const actionState = (state , action ) => {
         case "INCREASE": 
             const indexOfSelected  = state.Selected.findIndex(ithem => ithem.id === action.payload.id)
             state.Selected[indexOfSelected].quantity++;
+            state.Totall+=action.payload.price
             return{
                 ...state,
             }
         case "DECREASE" : 
             const indexselected  = state.Selected.findIndex(ithem => ithem.id === action.payload.id)
             state.Selected[indexselected].quantity--;
+            state.Totall-=action.payload.price
+
             return{
                 ...state,
         }
         case "CLEAR" :
-
+            console.log("state")
             return{
                 Selected : [],
                 Totall:0,
@@ -67,6 +74,7 @@ const actionState = (state , action ) => {
             return state
         
     }
+
 }
 
 export const CartContext = createContext()

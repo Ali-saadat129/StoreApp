@@ -9,22 +9,21 @@ import Styles from "./App.module.css"
 // comoponents
 import Mainpage from './components/Mainpage';
 import Navbar from "./components/Navbar";
+import Shopcart from "./components/Shopcart";
 
 function App() {
 
 
   return (
-    // <div className={`${Styles.App}`}>
       <Context>
         <Cardcontextuse>
           <Navbar />
           <Routes>
-            <Route path="*" element={<Mainpage to="/" replace />} />
-            
+            <Route path="/shopcart" element={<Shopcart></Shopcart>}></Route>
+            <Route path="/" element={<Mainpage to="/" replace />} />
           </Routes>
         </Cardcontextuse>
       </Context>
-    // </div>
 
   );
 }
