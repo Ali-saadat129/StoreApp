@@ -14,6 +14,7 @@ import { Shorter , ProductCount ,isSelected} from '../Functions/Title';
 
 
 const Card = ({Data}) => {
+
     // context - function for button work 
     const {state , dispatch} = useContext(CartContext)
 
@@ -30,7 +31,7 @@ const Card = ({Data}) => {
                 <div className={`${Styles.footer_Card}`}>
                     <Heart onClick={() => dispatch({type:"LIKE" , payload:Data})} /> 
                      
-                    {ProductCount(state,Data.id) == 1 && <Trash onClick={() => dispatch({type:"REMOVE" , payload:Data})} /> }
+                    {ProductCount(state,Data.id) === 1 && <Trash onClick={() => dispatch({type:"REMOVE" , payload:Data})} /> }
                     {ProductCount(state,Data.id) > 1 && <FileMinus onClick={() => dispatch({type:"DECREASE" , payload:Data})} /> }
 
 

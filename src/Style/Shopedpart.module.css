@@ -1,0 +1,12 @@
+
+.shopedParent{
+    display: flex;
+    width: 100%;
+    border: 1px solid black;
+}
+
+
+.imagepart img{
+    width: 10vw;
+    height: 10vh;
+}

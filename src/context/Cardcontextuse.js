@@ -58,9 +58,11 @@ const actionState = (state , action ) => {
         case "CLEAR" :
             console.log("state")
             return{
+                ...state,
                 Selected : [],
                 Totall:0,
-                Count : 0
+                Count : 0 ,
+
             }
         case "LIKE" :
             if(!state.Like.find(ithem => ithem.id=== action.payload.id)){
