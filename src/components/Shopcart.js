@@ -5,6 +5,9 @@ import { useContext } from 'react';
 import {CartContext} from '../context/Cardcontextuse';
 // css 
 import Styles from '../Style/Shopcart.module.css'
+
+import { Link } from 'react-router-dom';
+
 const Shopcart = () => {
 
     const {state , dispatch} = useContext(CartContext)
@@ -12,6 +15,7 @@ const Shopcart = () => {
     return (
         <div className={Styles.part}>
             <div className={Styles.part1}>
+                <Link to="../"> back </Link>
           
             </div>
             <div className={Styles.infocart}>

@@ -14,7 +14,7 @@ import CaredsParent from './CaredsParent';
 import pictitle from "../picture/rsz_1collection_stylish_young_women_dressed_vector_image_on_vectorstock.jpg"
 import bigback from "../picture/Untitled-3.gif"
 
-
+import { Link } from 'react-router-dom';
 
 
 const Mainpage = () => {
@@ -32,6 +32,7 @@ const Mainpage = () => {
             <div className={` ${Styles.scroll_pic} d-block`}>
                 <div>
                      <h5>WELCOME TO SHOPLAND</h5>
+                     <Link to="/shopcart">go</Link>
                      
                 </div>
                 <img src={bigback}></img>

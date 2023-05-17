@@ -1,6 +1,7 @@
 // react router dom
 import { Routes, Route ,redirect } from "react-router-dom";
 // // context
+
 import Context from "./context/Context";
 import Cardcontextuse  from "./context/Cardcontextuse";
 // css
@@ -15,16 +16,16 @@ function App() {
 
 
   return (
-      <Context>
-        <Cardcontextuse>
-          <Navbar />
-          <Routes>
-            <Route path="/shopcart" element={<Shopcart></Shopcart>}></Route>
-            <Route path="/" element={<Mainpage to="/" replace />} />
-          </Routes>
-        </Cardcontextuse>
-      </Context>
+          <Context>
+            <Cardcontextuse>
+              <Navbar />
+              <Routes>
+                  <Route path="/shopcart" element={<Shopcart></Shopcart>}></Route>
+                  <Route path="/" element={<Mainpage to="/" replace />} />
 
+              </Routes>
+            </Cardcontextuse>
+          </Context>
   );
 }
 
