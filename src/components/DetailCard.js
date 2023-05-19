@@ -3,7 +3,9 @@ import React from 'react';
 const DetailCard = (props) => {
     
     // const id = props.match.params.id
-    console.log("datail part")
+    const id = props;
+
+    console.log(props.match)
 
     return (
         <div>
