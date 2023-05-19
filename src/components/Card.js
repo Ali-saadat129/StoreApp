@@ -11,6 +11,7 @@ import {CartContext} from '../context/Cardcontextuse';
 import Styles from "../Style/Card.module.css"
 // function
 import { Shorter , ProductCount ,isSelected} from '../Functions/Title';
+import { Link } from 'react-router-dom';
 
 
 const Card = ({Data}) => {
@@ -38,7 +39,7 @@ const Card = ({Data}) => {
                     {!isSelected(state,Data.id)  && <button onClick={() => dispatch({type:"ADD" , payload:Data})} className={`${Styles.buy_Button}`}>Buy</button> }
                    
                     {ProductCount(state,Data.id) && <FilePlus onClick={() => dispatch({type:"INCREASE" , payload:Data} )} />}
-
+                    <Link to={`/shopcart/${Data.id}`}> Detail </Link>
                 </div>
             </div>
         </div>

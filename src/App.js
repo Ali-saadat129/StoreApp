@@ -11,6 +11,7 @@ import Styles from "./App.module.css"
 import Mainpage from './components/Mainpage';
 import Navbar from "./components/Navbar";
 import Shopcart from "./components/Shopcart";
+import DetailCard from "./components/DetailCard";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
             <Cardcontextuse>
               <Navbar />
               <Routes>
+                  <Route path="/shopcart/:id" element={<DetailCard></DetailCard>}></Route>
                   <Route path="/shopcart" element={<Shopcart></Shopcart>}></Route>
                   <Route path="/" element={<Mainpage to="/" replace />} />
 
