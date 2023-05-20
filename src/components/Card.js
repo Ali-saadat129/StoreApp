@@ -2,7 +2,7 @@ import React from 'react';
 
 // bootstrap   
 import 'bootstrap/dist/css/bootstrap.css';
-import {Cart, Heart ,FilePlus ,FileMinus ,Trash} from 'react-bootstrap-icons';
+import {Cart, Heart ,FilePlus ,FileMinus ,Trash ,Star} from 'react-bootstrap-icons';
 
 // context 
 import { useContext } from 'react';
@@ -29,6 +29,7 @@ const Card = ({Data}) => {
             <div className={`${Styles.info_part}`}>
                 <h3>{Shorter(Data.title)}</h3>
                 <h4>{Data.price} $</h4>
+                <span>{Data.rating.rate} <Star /></span>
                 <div className={`${Styles.footer_Card}`}>
                     <Heart onClick={() => dispatch({type:"LIKE" , payload:Data})} /> 
                      

@@ -21,7 +21,7 @@ function App() {
             <Cardcontextuse>
               <Navbar />
               <Routes>
-                  <Route path="/shopcart" element={<Shopcart></Shopcart>}></Route>
+                  <Route path="/shopcart" element={<Shopcart ></Shopcart>}></Route>
                   <Route path="/" element={<Mainpage to="/" replace />} />
                   <Route path="/:id" element={<DetailCard/>}></Route>
 

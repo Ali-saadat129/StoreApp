@@ -1,0 +1,31 @@
+
+.DetailParent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+.innerparent{
+    border: 2px solid #802c6e;
+    padding: 2rem;
+    border-radius: 5%;
+    width: 70%;
+
+}
+.imageDetail{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+.imageDetail img {
+    width: 8rem;
+}
+.Backicon{
+    color: black;
+}
+.Backicon a {
+    color: Black;
+}

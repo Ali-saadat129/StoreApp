@@ -1,4 +1,6 @@
-
+:root{
+    ---purple : #802c6e
+}
 .Mainpage{
     overflow-x: hidden;
     display: flex;
