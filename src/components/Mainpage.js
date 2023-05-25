@@ -10,6 +10,8 @@ import Styles from "../Style/Mainpage.module.css"
 
 // components 
 import CaredsParent from './CaredsParent';
+import Footer from './Footer';
+
 // img
 import pictitle from "../picture/rsz_1collection_stylish_young_women_dressed_vector_image_on_vectorstock.jpg"
 import bigback from "../picture/Untitled-3.gif"
@@ -38,6 +40,7 @@ const Mainpage = () => {
             </div>
                 <h1 className={`mt-4`}>{rr} PRODUCT {rr2} </h1>
                 <CaredsParent />
+                <Footer></Footer>
         </div>
     );
 };

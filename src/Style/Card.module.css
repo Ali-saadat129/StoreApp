@@ -24,6 +24,9 @@
 
 .cardParent .footer_Card{
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .cardParent .footer_Card .buy_Button{
@@ -31,6 +34,7 @@
     color: white;
     border: none;
     border-radius: 15%;
+    padding: 0.5rem;
 }
 .cardParent .info_part{
     display: flex;
@@ -38,3 +42,47 @@
     align-items: center;
     justify-content: space-between;
 }
+.title{
+    font-weight: bold;
+}
+.starticon{
+    color: goldenrod;
+}
+
+.cardParent .footer_Card .detail_Button{
+    color: black;
+    background-color: #3D8BFD;
+    border-radius: 15%;
+    padding: 0.5rem;
+
+}
+.cardParent .footer_Card .like{
+    color: red;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+}
+.plusButton , .minusButton , .trashButton {
+    font-size: 1.5rem;
+}
+/* --------------------------------- responsive ------------------------------- */
+
+
+@media only screen and (max-width: 992px) {
+    .cardParent .imageCard {
+        width: 36vw !important;
+        height: 80%;
+    }
+    .cardParent .footer_Card .buy_Button{
+        width: 3rem;
+        height: auto;
+        padding: 0.5rem;
+    }
+
+
+
+
+
+}
+
+

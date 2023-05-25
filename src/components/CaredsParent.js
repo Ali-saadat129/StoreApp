@@ -15,23 +15,52 @@ import Card from './Card';
 const CaredsParent = () => {
 
     const allData = useContext(Contextprovider)
-    // console.log(allData)
+    // sort button 
+    const sortValue = document.getElementById('sort')
+    // cards
+    const cardssort = document.querySelectorAll(".cardpart")
     
+    const sorthandler = (e) => {
+        
+        if(e.target.value==="all"){
+            cardssort.forEach(card => card.style.display="block")
+        }
+        else if(e.target.value==="view"){
+            cardssort.forEach(card => {
+                if(card.id%2===0){
+                    card.style.display="none"
+                }
+            }
+        
+                )
+
+        }
+        else{
+            cardssort.forEach(card => {
+                if(card.id %3 === 0){
+                    card.style.display="none"
+                }
+            })
+        }
+        
+            
+    }
+
+
     return (
         <div className={Styles.cardsParent}>
             <div className={`${Styles.sortParent}`}>
-
-                <select onClick={console.log(value)}>
-                    <option>All product</option>
-                    <option>most view</option>
-                    <option>most buy</option>
+                <select id='sort' onChange={sorthandler} >
+                    <option value='all' defaultValue>All product</option>
+                    <option value='view'>most view</option>
+                    <option value='buy'>most buy</option>
                 </select>
                 
             </div>
 
             <div className={`${Styles.cardPart} d-flex row`}>
                 
-                {allData.map(data => <div key={data.title} id={data.id} className={`col-4`}> <Card key={data.title}  Data={data}></Card> </div>)}
+                {allData.map(data => <div key={data.title} id={data.id} className={`col col-md-2 col-lg-4 cardpart`} > <Card key={data.title}   Data={data}></Card> </div>)}
 
             </div>
 
