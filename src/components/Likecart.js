@@ -4,19 +4,24 @@ import {CartContext} from '../context/Cardcontextuse';
 import { useContext } from 'react';
 // function
 import { Shorter,ProductCount , isSelected } from '../Functions/Title';
-
+// icon
+import {BackspaceFill} from 'react-bootstrap-icons';
+// reatc router dom 
+import { Link } from 'react-router-dom';
+// css
 import Styles from "../Style/Likecart.module.css"
+// components 
+import Like from './Like';
 
-const Likecart = ({data} ) => {
+const Likecart = ( ) => {
+
+    const {state , dispatch} = useContext(CartContext)
 
     return (
         <div className={Styles.likecart}>
-            <div className={Styles.image_part}>
-                <img src={data.image}></img>
-            </div>
+            <h3 className={Styles.Backicon}><Link to="/"><BackspaceFill></BackspaceFill></Link></h3>
 
-            <span>{Shorter(data.title)}</span>
-            <p>{data.price}</p>
+            {state.Like.map(ithem => <Like data={ithem}></Like>)}
 
         </div>
     );

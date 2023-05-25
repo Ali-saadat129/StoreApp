@@ -32,12 +32,10 @@ const Mainpage = () => {
             <div className={` ${Styles.scroll_pic} d-block`}>
                 <div>
                      <h5>WELCOME TO SHOPLAND</h5>
-                     <Link to="/shopcart">go</Link>
                      
                 </div>
                 <img src={bigback}></img>
             </div>
-            {/* <button  onClick={() => dispatch({type:"ADD"})}>Add</button> */}
                 <h1 className={`mt-4`}>{rr} PRODUCT {rr2} </h1>
                 <CaredsParent />
         </div>

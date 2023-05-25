@@ -21,7 +21,7 @@ const Card = ({Data}) => {
 
 
     return (
-        <div className={`${Styles.cardParent}`}>
+        <div className={` ${Styles.cardParent}`}>
             <div className={`${Styles.imageCard}`}>
             <img alt={Data.id} src={Data.image} className={Styles.imageCard}></img>
 

@@ -1,17 +1,5 @@
 .likecart{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid black;
-    border-radius: 15%;
-    padding: 1rem;
-    box-sizing: border-box;
-    margin: 1rem;
-}
-
-
-.image_part img{
-    width: 10vw;
-    height: 10vw;
+    
 }

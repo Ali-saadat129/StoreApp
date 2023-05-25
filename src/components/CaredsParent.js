@@ -21,7 +21,7 @@ const CaredsParent = () => {
         <div className={Styles.cardsParent}>
             <div className={`${Styles.sortParent}`}>
 
-                <select>
+                <select onClick={console.log(value)}>
                     <option>All product</option>
                     <option>most view</option>
                     <option>most buy</option>
@@ -31,7 +31,7 @@ const CaredsParent = () => {
 
             <div className={`${Styles.cardPart} d-flex row`}>
                 
-                {allData.map(data => <div key={data.title} className={`col-4`}> <Card key={data.title}  Data={data}></Card> </div>)}
+                {allData.map(data => <div key={data.title} id={data.id} className={`col-4`}> <Card key={data.title}  Data={data}></Card> </div>)}
 
             </div>
 

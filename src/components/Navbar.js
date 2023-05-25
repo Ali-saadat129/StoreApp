@@ -8,7 +8,8 @@ import Styles from '../Style/Navbar.module.css';
 // context 
 import { useContext } from 'react';
 import {CartContext} from '../context/Cardcontextuse'
-
+// react router dom 
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -49,8 +50,8 @@ const Navbar = () => {
                 </ul>
 
                  <ul className={ `col-lg-4 nav2 ${Styles.cart_part}`}>
-                    <li><a className={`${Styles.icon}`}><Heart></Heart></a><span>{state.LikeCount}</span></li>
-                    <li><a className={`${Styles.icon}`}><Cart4></Cart4></a><span>{state.Count}</span></li>
+                    <li><Link to="/liked" className={`${Styles.icon}`}><Heart></Heart></Link><span>{state.LikeCount}</span></li>
+                    <li><Link to="/shopcart" className={`${Styles.icon}`}><Cart4></Cart4></Link><span>{state.Count}</span></li>
                     <li><a>Log in</a></li>
 
                 </ul>
@@ -59,7 +60,6 @@ const Navbar = () => {
 
             </div>
 
-            
         </div>
     );
 };
