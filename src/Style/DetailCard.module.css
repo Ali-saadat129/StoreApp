@@ -4,13 +4,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 4rem;
+    width: 100%;
+    height: 100vh;
+    background-color: #802c6e;
 }
 .innerparent{
     border: 2px solid #802c6e;
     padding: 2rem;
     border-radius: 5%;
-    width: 70%;
+    width: 50%;
+    background-color: white;
 
 }
 .imageDetail{
@@ -29,3 +32,43 @@
 .Backicon a {
     color: Black;
 }
+
+.buy_Button{
+    background-color: #802c6e;
+    color: white;
+    border: none;
+    border-radius: 15%;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+.plusButton , .minusButton , .trashButton {
+    font-size: 1.3rem;
+}
+.star {
+    color: gold;
+}
+.rating{
+    font-size: 1.3rem;
+}
+/* ------------------ responsive -------------------- */
+
+
+@media only screen and (max-width: 576px) {
+    .DetailParent{
+        height: 100%;
+        padding: 1rem;
+    }
+    .innerparent{
+
+        width: 80%;
+        height: 80%;
+    }
+    .imageDetail{
+        padding: 0;
+    }
+    .imageDetail img {
+        width: 6rem;
+        margin: 0;
+    }
+}
+

@@ -1,9 +1,13 @@
 .part{
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: start;
     width: 100vw;
     height: 100%;
+    min-height: 100vh;
+    background-color: #802c6e;
+    border-top: 1px solid white;
+    color: white;
 }
 .shoppart{
     width: 75%;
@@ -17,17 +21,71 @@
     width: 25%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: start !important;
     margin: 1rem;
+    
 }
 .shoppart{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 80%;
+    padding: 1rem;
 }
 .shopcartmap{
     width: 90%;
 }
+.payButton{
+    display: flex;
+    justify-content: space-between;
+    width:80%;
+    margin: 1rem;
+}
+.payButton button {
+    border-radius: 15%;
+    outline: none;
+    border: none;
+    color: #802c6e;
+    font-size: 1.2rem;
+}
+.payButton button:hover{
+    padding: 0.5rem;
+}
+h4 a {
+    color: black;
+    background-color: white;
+    border-radius: 15%;
+    padding: 0.3rem;
+}
+.shoppart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* ----------------------- responsive ------------------------ */
+
+
+
+@media only screen and (max-width: 576px) {
+    .part{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .infopart{
+
+        width: 100%;
+    }
+    .payButton{
+
+        width:40%;
+    }
+
+}
+
+
+

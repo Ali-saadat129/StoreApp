@@ -29,6 +29,8 @@ const CaredsParent = () => {
             cardssort.forEach(card => {
                 if(card.id%2===0){
                     card.style.display="none"
+                    console.log("none2")
+
                 }
             }
         
@@ -39,6 +41,7 @@ const CaredsParent = () => {
             cardssort.forEach(card => {
                 if(card.id %3 === 0){
                     card.style.display="none"
+                    console.log("none")
                 }
             })
         }
@@ -49,8 +52,8 @@ const CaredsParent = () => {
 
     return (
         <div className={Styles.cardsParent}>
-            <div className={`${Styles.sortParent}`}>
-                <select id='sort' onChange={sorthandler} >
+            <div className={`${Styles.sortParent}`} >
+                <select className={`btn  btn-danger ${Styles.fdvfds}`} onClick={sorthandler} id='sort'  >
                     <option value='all' defaultValue>All product</option>
                     <option value='view'>most view</option>
                     <option value='buy'>most buy</option>
@@ -60,7 +63,7 @@ const CaredsParent = () => {
 
             <div className={`${Styles.cardPart} d-flex row`}>
                 
-                {allData.map(data => <div key={data.title} id={data.id} className={`col col-md-2 col-lg-4 cardpart`} > <Card key={data.title}   Data={data}></Card> </div>)}
+                {allData.map(data => <div key={data.title} id={data.id} className={`col-10 col-sm-6 col-lg-4 cardpart ${Styles.card} `} > <Card key={data.title}   Data={data}></Card> </div>)}
 
             </div>
 

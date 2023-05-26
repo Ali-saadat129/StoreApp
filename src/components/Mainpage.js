@@ -33,7 +33,7 @@ const Mainpage = () => {
         <div className={`${Styles.Mainpage}  p-3`}>
             <div className={` ${Styles.scroll_pic} d-block`}>
                 <div>
-                     <h5>WELCOME TO SHOPLAND</h5>
+                     <h5>{rr}WELCOME TO SHOPLAND{rr2}</h5>
                      
                 </div>
                 <img src={bigback}></img>

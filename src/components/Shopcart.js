@@ -10,15 +10,20 @@ import { Link } from 'react-router-dom';
 // Components 
 import Likecart from './Likecart';
 import Shopedpart from './Shopedpart';
-
+import Nothing from './Nothing';
+// bootstrap   
+import 'bootstrap/dist/css/bootstrap.css';
 
 const Shopcart = () => {
 
     const {state , dispatch} = useContext(CartContext)
+    const Count = state.Count
 
     return (
-        <div className={Styles.part}>
-            <div className={Styles.infopart}>
+        <div className={`${Styles.part}`}>
+
+            <div className={`${Styles.infopart}`}>
+            <h4><Link to="../">BACK</Link></h4>
 
                 <div className={Styles.infocart}>
                     <div className={Styles.infoParent}>
@@ -31,11 +36,9 @@ const Shopcart = () => {
                     <button className={Styles.cartButton} onClick={() => dispatch({type:"CLEAR" })}>Clear</button>
                     <button className={Styles.cartButton}>Pay</button>
                 </div>
-                    <h4><Link to="../">BACK</Link></h4>
 
-                    {state.Like.map(ithem => <div key={ithem.title}> <Likecart  data={ithem}></Likecart> </div>)}
             </div>
-            <div className={Styles.shoppart}>
+            <div className={` ${Styles.shoppart}`}>
                 {state.Selected.map(ithem => <div className={Styles.shopcartmap}><Shopedpart data={ithem}></Shopedpart> </div>)}
             </div>
         </div>

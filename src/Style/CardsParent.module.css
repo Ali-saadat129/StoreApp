@@ -19,4 +19,47 @@
     padding: 1rem 2rem;
     margin-bottom: 2rem;
 }
+.sortParent{
+    padding: 2rem;
+    outline: none;
+    border-radius: 15%;
+}
+
+
+
+
+/* ==================== responsive ============================== */
+@media only screen and (min-width: 576px) {
+    .card{
+        width: 70%;
+    }
+
+    .cardPart{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+}
+
+
+
+
+
+
+@media only screen and (max-width: 992px) {
+    .card{
+        width: 60%;
+    }
+
+    .cardPart{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+}
+
 

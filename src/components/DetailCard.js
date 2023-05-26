@@ -40,16 +40,16 @@ const DetailCard = (props) => {
                 <p>Category : {Data.category}</p>
                 <span>About product : {Data.description}</span>
                 <h5>{Data.price}$</h5>
-                <span>{Data.rating.rate} <Star></Star></span>
+                <span className={Styles.rating}>{Data.rating.rate} <Star className={Styles.star}></Star></span>
                 
                 <div>
-                    {ProductCount(state,Data.id) === 1 && <Trash onClick={() => dispatch({type:"REMOVE" , payload:Data})} /> }
-                    {ProductCount(state,Data.id) > 1 && <FileMinus onClick={() => dispatch({type:"DECREASE" , payload:Data})} /> }
+                    {ProductCount(state,Data.id) === 1 && <Trash className={Styles.plusButton} onClick={() => dispatch({type:"REMOVE" , payload:Data})} /> }
+                    {ProductCount(state,Data.id) > 1 && <FileMinus className={Styles.plusButton} onClick={() => dispatch({type:"DECREASE" , payload:Data})} /> }
 
 
                     {!isSelected(state,Data.id)  && <button onClick={() => dispatch({type:"ADD" , payload:Data})} className={`${Styles.buy_Button}`}>Buy</button> }
                    
-                    {ProductCount(state,Data.id) && <FilePlus onClick={() => dispatch({type:"INCREASE" , payload:Data} )} />}
+                    {ProductCount(state,Data.id) && <FilePlus className={Styles.plusButton} onClick={() => dispatch({type:"INCREASE" , payload:Data} )} />}
                 </div>
 
              </div>

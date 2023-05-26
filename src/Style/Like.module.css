@@ -1,6 +1,5 @@
 .likecart{
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     border: 1px solid black;
@@ -8,6 +7,8 @@
     padding: 1rem;
     box-sizing: border-box;
     margin: 1rem;
+    /* width: 40vw; */
+    background-color: white;
 }
 .image_part img{
     width: 10vw;

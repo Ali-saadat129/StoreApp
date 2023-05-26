@@ -9,7 +9,7 @@ import { Shorter , ProductCount ,isSelected} from '../Functions/Title';
 import Styles from "../Style/Shopedpart.module.css"
 // icons
 import 'bootstrap/dist/css/bootstrap.css';
-import {Cart, Heart ,FilePlus ,FileMinus ,Trash} from 'react-bootstrap-icons';
+import {Cart, Heart ,FilePlus ,FileMinus ,Trash ,CurrencyDollar , Star} from 'react-bootstrap-icons';
 
 const Shopedpart = ({data}) => {
 
@@ -21,9 +21,10 @@ const Shopedpart = ({data}) => {
             <div className={Styles.imagepart}>
                 <img src={data.image}></img>
             </div>
-            <div>
-                <p>{Shorter(data.title)}</p>
-                <p>{data.price}</p>
+            <div className={Styles.infopart}>
+                <h3>{Shorter(data.title)}</h3>
+                <p>{data.rating.rate}<Star /></p>
+                <p>{data.price} <CurrencyDollar /></p>
                 {ProductCount(state,data.id) === 1 && <Trash onClick={() => dispatch({type:"REMOVE" , payload:data})} /> }
                 {ProductCount(state,data.id) > 1 && <FileMinus onClick={() => dispatch({type:"DECREASE" , payload:data})} /> }
 

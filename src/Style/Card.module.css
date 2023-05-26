@@ -67,22 +67,93 @@
 }
 /* --------------------------------- responsive ------------------------------- */
 
-
-@media only screen and (max-width: 992px) {
+@media only screen and (min-width: 576px) {
     .cardParent .imageCard {
-        width: 36vw !important;
+        width: 56vw !important;
         height: 80%;
     }
-    .cardParent .footer_Card .buy_Button{
-        width: 3rem;
-        height: auto;
-        padding: 0.5rem;
+
+    .cardParent .imageCard img {
+        width: 100% !important;
+        height: 50%;
+    }
+    .cardParent .info_part{
+        width: 100%;
+        justify-content: space-evenly;
     }
 
+    .cardParent .footer_Card{
+        justify-content: space-evenly;
+        margin: 0;
+        width: 100%;
+    }
+    .cardParent .footer_Card .buy_Button{
+        padding: 0.3rem;
+        font-size: 1.3rem;
+    }
 
+    .cardParent .footer_Card .detail_Button{
 
+        padding: 0.3rem;
+        font-size: 1.3rem;
+    }
+    .cardParent .footer_Card .like{
+
+        font-size: 1.4rem;
+    
+    }
+    .plusButton , .minusButton , .trashButton {
+        font-size: 1.5rem;
+    }
+    .cardParent {
+        padding: 0.7rem;
+    }
+    .title{
+        margin: 0;
+    }
 
 
 }
 
 
+
+
+
+
+
+
+/* 576 */
+
+@media only screen and (max-width: 576px) {
+    .cardParent .imageCard {
+        width: 36vw !important;
+        height: 80%;
+        }
+    .cardParent .imageCard img {
+        width: 90% !important;
+        height: 50%;
+    }
+    .cardParent .footer_Card .buy_Button{
+        width: 2rem;
+        font-size: 0.8rem;
+        height: auto;
+        padding: 0.5rem;
+    }
+    .detail_Button{
+        width: 3rem;
+        font-size: 0.8rem;
+
+    }
+
+}
+
+/* 992px */
+
+@media only screen and (min-width: 576px) {
+
+    .cardParent .imageCard {
+        width: 25vw !important;
+        height: 80%;
+        }
+
+}
